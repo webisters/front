@@ -1,0 +1,36 @@
+/* Colors */
+@each $name, $color in $colors {
+  .#{$name} {
+    @include colors($color);
+    border-color: autoDarkenLighten($color, 30%);
+
+    h1, h2, h3, h4, h5, h6 {
+      color: pick-visible-color($color, #000, #fff);
+    }
+  }
+  .#{$name}-hover:hover,
+  button.#{$name}:hover,
+  .btn.#{$name}:hover {
+    @include colorsHover($color);
+    border-color: autoDarkenLighten($color, 30%);
+  }
+  button.#{$name}:focus,
+  button.#{$name}:active,
+  button.#{$name}.active,
+  .btn.#{$name}:focus,
+  .btn.#{$name}:active,
+  .btn.#{$name}.active {
+    @include colorsHover(autoDarkenLighten($color, 2%));
+    border-color: autoDarkenLighten($color, 30%);
+    box-shadow: $button-box-shadow-focus;
+  }
+  .text-#{$name} {
+    color: $color !important;
+  }
+  a.text-#{$name}:hover {
+    color: pick-visible-color($default, darken($color, 10%), lighten($color, 10%)) !important;
+  }
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+}

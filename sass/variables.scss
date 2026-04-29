@@ -1,0 +1,43 @@
+$font-family-sans: "DejaVu Sans", "Open Sans", Arial, Helvetica, sans-serif;
+$font-family-serif: "DejaVu Serif", serif;
+$font-family-mono: "DejaVu Sans Mono", Consolas, "Courier New", monospace;
+//
+$font-size: 1rem;
+$line-height: 1.5;
+//
+$margin-025: $font-size * .25;
+$margin-050: $font-size * .5;
+$margin-075: $font-size * .75;
+$margin-100: $font-size;
+$margin-200: $font-size * 2;
+//
+$padding-025: $font-size * .25;
+$padding-050: $font-size * .5;
+$padding-075: $font-size * .75;
+$padding-100: $font-size;
+$padding-200: $font-size * 2;
+//
+$border-width: $font-size * 0.05;
+$border-bar-width: $padding-050;
+//
+$border-radius: $font-size * .25;
+//
+$default: #fff;
+// $default: #202124;
+//$default: #141516;
+$primary: #a0a;
+// $primary: #30c31b;
+// $primary: #e04028;
+$info: #2c8cff;
+$success: #47c06e;
+$warning: #cac215;
+$error: #ff3044;
+//
+$colors: (
+  "default": $default,
+  "primary": $primary,
+  "error": $error,
+  "info": $info,
+  "success": $success,
+  "warning": $warning
+);

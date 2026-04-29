@@ -1,0 +1,86 @@
+/* Tables */
+table,
+.table,
+.table-all {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  display: table;
+
+  tr {
+    transition: .3s;
+  }
+
+  th,
+  td {
+    padding: $padding-050;
+    display: table-cell;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  th {
+    font-weight: bold;
+  }
+}
+
+.table,
+.table-all {
+  tr {
+    &:nth-child(odd) {
+      background-color: $default;
+    }
+
+    &:nth-child(even) {
+      background-color: autoDarkenLighten($default, 10%);
+      color: autoDarkenLighten(
+          autoDarkenLighten($default, 10%), 80%
+      );
+    }
+  }
+}
+
+.table,
+.table-bordered,
+.table-all {
+  border: $border-width solid autoDarkenLighten($default, 30%);
+
+  tr {
+    border-bottom: $border-width solid autoDarkenLighten($default, 30%);
+  }
+
+  thead tr {
+    border-bottom: ($border-width * 3) solid autoDarkenLighten($default, 30%);
+  }
+}
+
+.table-bordered,
+.table-all {
+  td, th {
+    border-right: $border-width solid autoDarkenLighten($default, 30%);
+  }
+}
+
+.table-striped {
+  tbody tr:nth-child(even) {
+    background-color: autoDarkenLighten($default, 20%);
+    color: autoDarkenLighten(
+        autoDarkenLighten($default, 20%), 80%
+    );
+  }
+}
+
+.table-hoverable tbody tr:hover,
+.table-all tbody tr:hover {
+  background-color: autoDarkenLighten($default, 15%);
+  color: autoDarkenLighten(
+      autoDarkenLighten($default, 15%), 80%
+  );
+}
+
+.table-centered tr {
+  th,
+  td {
+    text-align: center;
+  }
+}

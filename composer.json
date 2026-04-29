@@ -1,0 +1,40 @@
+{
+    "name": "webisters/front",
+    "type": "library",
+    "description": "Webisters Front Library",
+    "keywords": [
+        "front"
+    ],
+    "homepage": "https://webisters.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Hafiz Muhammad Moaz",
+            "email": "hafizmoazkhalid@gmail.com",
+            "homepage": "https://github.com/HafizMMoaz"
+        }
+    ],
+    "require": {
+        "php": ">=8.2"
+    },
+    "require-dev": {
+        "webisters/mvc": "*",
+        "scssphp/scssphp": "^1.8"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "support": {
+        "email": "support@webisters.com",
+        "issues": "https://gitlab.com/webisters/libraries/front/issues",
+        "wiki": "https://gitlab.com/webisters/libraries/front/wikis/home",
+        "source": "https://gitlab.com/webisters/libraries/front",
+        "docs": "https://webisters.com"
+    }
+}
+
+

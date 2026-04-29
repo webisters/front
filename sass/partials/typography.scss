@@ -1,0 +1,160 @@
+$heading-margin: $margin-050 0 !default;
+$p-margin-top: $margin-100 !default;
+$hr-margin: $p-margin-top 0 !default;
+/* Typography */
+h1 {
+  font-size: $font-size * 2.5;
+}
+
+h2 {
+  font-size: $font-size * 2.25;
+}
+
+h3 {
+  font-size: $font-size * 2;
+}
+
+h4 {
+  font-size: $font-size * 1.75;
+}
+
+h5 {
+  font-size: $font-size * 1.5;
+}
+
+h6 {
+  font-size: $font-size * 1.25;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+  margin: $heading-margin;
+  color: pick-visible-color($default, darken($default, 85%), lighten($default, 85%));
+}
+
+a {
+  color: $primary;
+  text-decoration: none;
+  transition: .3s;
+}
+
+a:hover {
+  color: pick-visible-color($default, darken($primary, 10%), lighten($primary, 10%));
+  text-decoration: underline;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: $p-margin-top;
+}
+
+.serif {
+  font-family: $font-family-serif;
+}
+
+.text-tiny {
+  font-size: $font-size * .5 !important;
+}
+
+.text-small {
+  font-size: $font-size * .75 !important;
+}
+
+.text-medium {
+  font-size: $font-size !important;
+}
+
+.text-large {
+  font-size: $font-size * 1.25 !important;
+}
+
+.text-large-1 {
+  font-size: $font-size * 1.75 !important;
+}
+
+.text-large-2 {
+  font-size: $font-size * 2.5 !important;
+}
+
+.text-large-3 {
+  font-size: $font-size * 3.5 !important;
+}
+
+.text-jumbo {
+  font-size: $font-size * 4.75 !important;
+}
+
+.text-left {
+  text-align: left !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+.text-center, .center {
+  text-align: center !important;
+}
+
+.text-wide {
+  letter-spacing: $font-size * .25;
+}
+
+pre,
+code {
+  font-family: $font-family-mono;
+  font-size: $font-size;
+}
+
+pre {
+  width: auto;
+  background-color: autoDarkenLighten($default, 10%);
+  padding: $padding-050 $padding-075;
+  border: $border-width solid autoDarkenLighten($default, 30%);
+  // border-left: .26rem solid autoDarkenLighten($primary, 5%);
+  //word-wrap: break-word;
+  tab-size: 4;
+  overflow: auto;
+}
+
+.section,
+section + section,
+pre {
+  margin-top: $p-margin-top !important;
+  margin-bottom: $p-margin-top !important;
+}
+
+:not(pre) > code {
+  color: autoDarkenLighten(autoDarkenLighten($default, 10%), 80%);
+  background-color: autoDarkenLighten($default, 10%);
+  padding-left: $padding-025;
+  padding-right: $padding-025;
+  font-size: 110%;
+  border-radius: .5rem;
+}
+
+mark {
+  @include colors($warning);
+  padding-left: $padding-025;
+  padding-right: $padding-025;
+}
+
+hr {
+  display: block;
+  //border: 1px inset;
+  margin: $hr-margin;
+  color: autoDarkenLighten($default, 20%);
+  //border: .06rem solid autoDarkenLighten($default, 20%);
+}
